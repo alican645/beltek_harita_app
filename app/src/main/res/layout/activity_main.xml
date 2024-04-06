@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color4"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save Your Travel Memories"
+                android:textColor="@color/color2"
+                android:gravity="center"
+            />
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/welcomeImage"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintEnd_toEndOf="@id/toolbar"
+
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.32"
+
+        app:layout_constraintVertical_bias="0.1"
+
+        android:src="@drawable/resim"
+
+        android:layout_marginTop="20dp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usernameEdtLay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toBottomOf="@id/welcomeImage"
+        app:layout_constraintStart_toStartOf="@id/welcomeImage"
+        app:layout_constraintEnd_toEndOf="@id/welcomeImage"
+
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintWidth_percent="0.5"
+
+        android:layout_marginTop="20dp"
+
+
+
+        >
+
+        <EditText
+            android:id="@+id/usernameEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textSize="20sp"
+            android:hint="Username"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordEdtLay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toBottomOf="@id/usernameEdtLay"
+        app:layout_constraintStart_toStartOf="@id/usernameEdtLay"
+        app:layout_constraintEnd_toEndOf="@id/usernameEdtLay"
+
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintWidth_percent="0.5"
+
+        android:layout_marginTop="20dp"
+
+
+
+        >
+
+        <EditText
+            android:id="@+id/passwordEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textSize="20sp"
+            android:hint="Password"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/passwordEdtLay"
+        app:layout_constraintStart_toStartOf="@id/passwordEdtLay"
+        app:layout_constraintEnd_toEndOf="@id/passwordEdtLay"
+
+
+        android:background="@drawable/rectangle_button"
+
+        android:text="Giriş Yap"
+        android:textSize="20sp"
+
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/notUserTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/loginBtn"
+        app:layout_constraintStart_toStartOf="@id/loginBtn"
+        app:layout_constraintEnd_toStartOf="@id/register"
+        app:layout_constraintBottom_toBottomOf="@id/register"
+
+
+        android:text="Kullanıcı Değil misiniz?"
+        android:textColor="@color/color4"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+
+        />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/loginBtn"
+        app:layout_constraintEnd_toEndOf="@id/loginBtn"
+        app:layout_constraintStart_toEndOf="@id/notUserTxt"
+
+        android:text="Kayıt Olun"
+        android:textColor="@color/color1"
+        android:textSize="16sp"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
